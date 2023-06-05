@@ -1,0 +1,26 @@
+[
+    {
+        "path": "pages/expression-eval.html",
+        "title": "Вычисление выражений"
+    },
+    {
+        "path": "pages/if-statement.html",
+        "title": "Оператор ветвления"
+    },
+    {
+        "path": "pages/encapsulation.html",
+        "title": "Принцип инкапсуляции"
+    },
+    {
+        "path": "pages/vcs-git.html",
+        "title": "Система контроля версий Git"
+    },
+    {
+        "path": "pages/inheritance-polymorphism.html",
+        "title": "Наследование и полиморфизм"
+    },
+    {
+        "path": "pages/abstract.html",
+        "title": "Абстрактные классы и интерфейсы"
+    }
+]

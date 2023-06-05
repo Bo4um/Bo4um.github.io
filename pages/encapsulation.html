@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    scrip
+    <title>Принцип инкапсуляции</title>
+</head>
+
+<body>
+    <h2>Принцип инкапсуляции</h2>
+    <hr>
+    <p>Написать программу, зашифровывающую и расшифровывающую некоторое сообщение с помощью шифра Виженера.</p>
+    <p>Программа должна запрашивать одну строку - операция. Если строка равна <code class="gray-bg">"encode"</code>, то пользователь будет шифровать
+        сообщение. Если строка равна <code class="gray-bg">"decode"</code>, то пользователь будет дешифровать сообщение.</p>
+    <p>Допустим, в программе объявлена переменная</p>
+    <pre class="prettyprint lang-java">
+    Scanner scanner = new Scanner(System.in);
+    </pre>
+    <p>Тогда считывание строки с операцией и её обработка могут выглядеть следующим образом:</p>
+    <pre class="prettyprint">
+    System.out.print("Введите операцию (encode / decode): ");
+    String operation = scanner.nextLine();
+    if(operation.equals("encode")) {
+        /* здесь шифрование сообщения */
+    } else if(operation.equals("decode")) {
+        /* здесь дешифрование сообщения */
+    } else {
+        System.out.println("Неверная операция");
+    }
+    </pre>
+    <p>После ввода операции, но до её обработки в операторе <code class="gray-bg">if</code> нужно ввести с клавиатуры сообщение и ключ:</p>
+    <pre class="prettyprint">
+    System.out.print("Введите сообщение: ");
+    String message = scanner.nextLine();
+    System.out.print("Введите ключ: ");
+    String key = scanner.nextLine();
+    </pre>
+    <p>Само шифрование сообщения необходимо реализовать в отдельном классе <code class="gray-bg">Vigenere</code> так, чтобы работа с эти классом могла осуществляться следующим образом:</p>
+    <pre class="prettyprint lang-java">
+    // Создаём объект класса, передавая его конструктору строку с ключом шифрования
+    Vigenere vig = new Vigenere(key);
+    // Создаём переменную для хранения индекса (номера) символа в сообщении
+    int letterIndex = 0;
+    // Обрабатываем все символы сообщения
+    while(letterIndex < message.length()) {
+        // Получаем очередной символ сообщения
+        char letter = message.charAt(letterIndex);
+        // Для шифрования:
+        char encodedLetter = vig.encode(letter);
+        System.out.print(encodedLetter);
+        // Для дешифрования:
+        char decodedLetter = vig.decode(letter);
+        System.out.print(decodedLetter);
+        letterIndex++;
+    }
+    </pre>
+    <p>При этом само шифрование/дешифрование в классе <code class="gray-bg">Vigenere</code> должно осуществляться следующим образом. При создании объекта этого класса конструктор запоминает в приватном поле этого класса переданную строку-ключ. Пусть это поле будет иметь имя key. Также в приватном поле этого класса необходимо хранить текущую позицию (индекс) в строке-ключе. Будем считать, что данное поле будет называться <code class="gray-bg">position</code>. Также будем считать, что строка-ключ будет состоять только из больших латинских символов. Тогда в каждый момент времени мы можем вычислить некоторое целое число, которое назовём смещением, и которое будет вычисляться следующим образом:</p>
+    <pre class="prettyprint">
+    int shift = key.charAt(position) - 'A';
+    </pre>
+    <p>Тогда в методе <code class="gray-bg"></code> необходимо вычислить указанное смещение и прибавить его к переданному символу, затем увеличить текущую позицию <code class="gray-bg">(position)</code> и вернуть символ, полученный в результате прибавления. А в методе <code class="gray-bg">decode()</code> необходимо вычислить указанное смещение и отнять его от переданного символа, затем увеличить текущую позицию и вернуть символ, полученный в результате вычитания.</p>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+[
+  {
+    "path": "https://gitlab.com/yermochenko-example/it-academy-java-web-2022/-/tree/main/hello-world",
+    "title": "hello-world"
+  }, {
+    "path": "https://gitlab.com/yermochenko-example/it-academy-java-web-2022/-/tree/main/primitive-numeric-types",
+    "title": "primitive-numeric-types"
+  }, {
+    "path": "https://gitlab.com/yermochenko-example/it-academy-java-web-2022/-/tree/main/expression-calculation",
+    "title": "expression-calculation"
+  }, {
+    "path": "https://gitlab.com/yermochenko-example/it-academy-java-web-2022/-/tree/main/boolean-type",
+    "title": "boolean-type"
+  }, {
+    "path": "https://gitlab.com/yermochenko-example/it-academy-java-web-2022/-/tree/main/if-statement",
+    "title": "if-statement"
+  }, {
+    "path": "https://gitlab.com/yermochenko-example/it-academy-java-web-2022/-/tree/main/bank-commision",
+    "title": "bank-commision"
+  }, {
+    "path": "https://gitlab.com/yermochenko-example/it-academy-java-web-2022/-/tree/main/objects",
+    "title": "objects"
+  }, {
+    "path": "https://gitlab.com/yermochenko-example/it-academy-java-web-2022/-/tree/main/char-type",
+    "title": "char-type"
+  }, {
+    "path": "https://gitlab.com/yermochenko-example/it-academy-java-web-2022/-/tree/main/chess",
+    "title": "chess"
+  }, {
+    "path": "https://gitlab.com/yermochenko-example/it-academy-java-web-2022/-/tree/main/notes-web-application",
+    "title": "notes-web-application"
+  }
+]
