@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script defer src="swpcms.js"></script>
-    <script src="some-other-library.js"></script>
-    <script defer src="script/prettify.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-    <link rel="stylesheet" href="styles/prettify.css">
-    <link rel="stylesheet" href="styles/google-code-prettify-styles.css">
-  </head>
-  <body>
-    <header>
-      <h1>IT academy wiki portal</h1>
-    </header>
-    <div class="container">
-      <div class="menus-container">
-        <div class="menu-wrapper">
-          <ul class="menu">
-            <h3>Практические задания</h3>
-            <swpcms:menu src="main-menu.json">
+
+<head>
+  <script defer src="swpcms.js"></script>
+  <script src="some-other-library.js"></script>
+  <script defer src="script/prettify.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" href="styles/prettify.css">
+  <link rel="stylesheet" href="styles/google-code-prettify-styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>IT academy wiki portal</h1>
+  </header>
+  <div class="container">
+    <div class="menus-container">
+      <div class="menu-wrapper">
+        <ul class="menu">
+          <h3>Практические задания</h3>
+          <swpcms:menu src="main-menu.json">
+            <li class="side-menu-item">
+              <div class="menu-item-wrapper">
+                <a href="#" swpcms:menu-item-id>
+                  <swpcms:menu-item-text />
+                </a>
+              </div>
+            </li>
+          </swpcms:menu>
+        </ul>
+      </div>
+      <section class="main-content-wrapper">
+        <nav class="side-menu-wrapper">
+          <ol class="side-menu">
+            <h3>Примеры</h3>
+            <swpcms:menu src="side-menu.json">
               <li class="side-menu-item">
-                <div class="menu-item-wrapper">
-                  <a href="#" swpcms:menu-item-id>
-                    <swpcms:menu-item-text/>
-                  </a>
-                </div>
+                <a href="#" swpcms:menu-item-id>
+                  <swpcms:menu-item-text />
+                </a>
               </li>
             </swpcms:menu>
-          </ul>
-        </div>
-        <section class="main-content-wrapper">
-          <nav class="side-menu-wrapper">
-            <ol class="side-menu">
-              <h3>Примеры</h3>
-              <swpcms:menu src="side-menu.json">
-                <li class="side-menu-item">
-                  <a href="#" swpcms:menu-item-id>
-                    <swpcms:menu-item-text/>
-                  </a>
-                </li>
-              </swpcms:menu>
-            </ol>
-          </nav>
-        </section>
-      </div>
-      <article class="main">
-        <div class="main-content">
-          <swpcms:main/>
-        </div>
-      </article>
+          </ol>
+        </nav>
+      </section>
     </div>
-    <footer>Copyright<footer/>
-  </body>
+    <article class="main">
+      <div class="main-content">
+        <swpcms:main />
+      </div>
+    </article>
+  </div>
+  <footer>Copyright
+    <footer />
+</body>
+
 </html>

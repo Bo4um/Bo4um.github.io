@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    scrip
     <title>Принцип инкапсуляции</title>
 </head>
 
@@ -40,9 +39,11 @@
     </pre>
     <p>Само шифрование сообщения необходимо реализовать в отдельном классе <code class="gray-bg">Vigenere</code> так, чтобы работа с эти классом могла осуществляться следующим образом:</p>
     <pre class="prettyprint lang-java">
-    // Создаём объект класса, передавая его конструктору строку с ключом шифрования
+    // Создаём объект класса, передавая его конструктору
+    // строку с ключом шифрования
     Vigenere vig = new Vigenere(key);
-    // Создаём переменную для хранения индекса (номера) символа в сообщении
+    // Создаём переменную для хранения индекса (номера)
+    // символа в сообщении
     int letterIndex = 0;
     // Обрабатываем все символы сообщения
     while(letterIndex < message.length()) {

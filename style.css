@@ -1,65 +1,141 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
+  position: relative;
 }
-
-h1 {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
 hr {
-    border: 1px solid #000;
+  border: 1px solid #000;
 }
-
-table, th, td {
-    text-align: left;
-    border: 1px solid;
-    padding: 10px;
+table,
+th,
+td {
+  text-align: left;
+  border: 1px solid;
+  padding: 10px;
 }
-
 table {
-    
-    border-collapse: collapse;
-    color: #333238;
+  border-collapse: collapse;
+  color: #333238;
 }
-
-code.gray-bg {
-    padding: 3px;
-    border-radius: 6px;
-    background-color: #ececef;
-}
-
 article.main {
-    width: 60%;
-    height: 100vh;
-    overflow: scroll;
-    color: #000;
-    background: #FFD447;
+  width: 670px;
+  overflow: auto;
+  color: #000;
+  background: #ffd447;
+  padding: 50px;
 }
-
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #000;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  font-size: 24px;
+  color: #ffd447;
+}
 .container {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-between;
+  width: 1100px;
+  height: 85vh;
+  border: 5px solid #ffd447;
+  font-size: 18px;
 }
-
 footer {
-    background-color: aqua;
-    text-align: center;
+  background: #000;
+  color: #ffd447;
+  text-align: center;
+  width: 100%;
+  height: 10px;
+  margin-top: 10px;
+  font-size: 24px;
 }
-
 .menus-container {
-    background: #000;
-    color: #FFD447;
+  background: #000;
+  color: #ffd447;
+  padding: 50px;
+  width: 430px;
 }
-
 .menus-container .menu-item-wrapper a,
 .main-content-wrapper a {
-    color: #FFD447;
+  color: #ffd447;
+}
+.menu {
+  margin-bottom: 50px;
+}
+.menu > h3,
+.side-menu > h3,
+.side-menu-item {
+  margin-bottom: 10px;
+}
+.side-menu-item:hover {
+  text-shadow: 20 #ffd447;
+}
+/*** effect for link ***/
+a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px; /* Высота линии */
+  background-color: #ffd447; /* Цвет подчеркивания при исчезании линии*/
+  transition: width 0.8s; /* Время эффекта */
+}
+a:hover:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px; /* Высота линии */
+  background-color: #ffd447; /* Цвет подчеркивания при появлении линии*/
+  transition: width 0.8s; /* Время эффекта */
+}
+pre.prettyprint {
+  background: #ffde71;
+  padding-top: 10px;
+  line-height: 20px;
+  font-size: 14px;
+}
+code.gray-bg {
+  padding: 1px 3px;
+  border-radius: 6px;
+  background: #ffde71;
+  font-size: 17px;
+}
+.main-content {
+  font-size: 20px;
+}
+.main-content h3,
+.main-content ol > li,
+.main-content ul > li,
+.main-content p {
+  margin-top: 10px;
+}
+.main-content h2,
+.main-content h3,
+.main-content p,
+.main-content hr,
+.main-content table,
+.main-content ol > li,
+.main-content ul > li {
+  margin-bottom: 10px;
+}
+.main-content ol > li,
+.main-content ul > li {
+  margin-left: 20px;
 }
