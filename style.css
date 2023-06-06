@@ -1,3 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -9,7 +15,7 @@ h1 {
 }
 
 hr {
-    border: 1px solid #e6e6ea;
+    border: 1px solid #000;
 }
 
 table, th, td {
@@ -34,6 +40,8 @@ article.main {
     width: 60%;
     height: 100vh;
     overflow: scroll;
+    color: #000;
+    background: #FFD447;
 }
 
 .container {
@@ -44,4 +52,14 @@ article.main {
 footer {
     background-color: aqua;
     text-align: center;
+}
+
+.menus-container {
+    background: #000;
+    color: #FFD447;
+}
+
+.menus-container .menu-item-wrapper a,
+.main-content-wrapper a {
+    color: #FFD447;
 }
